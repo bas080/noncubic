@@ -240,7 +240,6 @@ noncubic.register_slope_upsdown_edge = function(modname, subname, recipeitem, gr
       {"", "", ""},
     },
   })
-
 end
 
 noncubic.register_slope_upsdown_inner_edge = function(modname, subname, recipeitem, groups, images, description)
@@ -635,7 +634,6 @@ noncubic.register_element_end = function(modname, subname, recipeitem, groups, i
       {"", recipeitem, ""},    
       },
   })
-
 end
 
 noncubic.register_element_straight_double = function(modname, subname, recipeitem, groups3, images3, description3)
@@ -666,7 +664,6 @@ noncubic.register_element_straight_double = function(modname, subname, recipeite
       {"", modname..':element_straight_' .. subname, ""},    
     },
   })
-
 end
 
 noncubic.register_element_edge_double = function (modname, subname, recipeitem, groups3, images3, description3)
@@ -702,7 +699,6 @@ noncubic.register_element_edge_double = function (modname, subname, recipeitem, 
       {"", modname..':element_edge_' .. subname, ""},    
     },
   })
-
 end
 
 noncubic.register_element_t_double = function (modname, subname, recipeitem, groups3, images3, description3)
@@ -740,7 +736,6 @@ noncubic.register_element_t_double = function (modname, subname, recipeitem, gro
       {"", modname..':element_t_' .. subname, ""},
     },
   })
-
 end
 
 noncubic.register_element_cross_double = function (modname, subname, recipeitem, groups3, images, description3)
@@ -927,12 +922,10 @@ noncubic.register_stairs = function(modname, item, recipeitem, groups, images, d
 				end
 				return itemstack
 			end
-			
 			-- Otherwise place regularly
 			return minetest.item_place(itemstack, placer, pointed_thing)
 		end,
 	})
-
 	minetest.register_craft({
 		output = itemname .. ' 3',
 		recipe = {
@@ -980,20 +973,25 @@ noncubic.register_elements = function(modname, subname, recipeitem, groups, imag
 end
 
 noncubic.register_all = function(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_slope(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_slope_upsdown(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_slope_edge(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_slope_inner_edge(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_slope_upsdown_edge(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_slope_upsdown_inner_edge(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_pyramid(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_spike(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_cylinder(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_cylinder_horizontal(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_sphere(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_element_straight(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_element_edge(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_element_t(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_element_cross(modname, subname, recipeitem, groups, images, description)
-   noncubic.register_element_end(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_slope(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_slope_upsdown(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_slope_edge(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_slope_inner_edge(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_slope_upsdown_edge(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_slope_upsdown_inner_edge(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_pyramid(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_spike(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_cylinder(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_cylinder_horizontal(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_sphere(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_straight(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_edge(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_t(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_cross(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_end(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_straight_double(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_edge_double(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_t_double(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_cross_double(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_end_double(modname, subname, recipeitem, groups, images, description)
 end
