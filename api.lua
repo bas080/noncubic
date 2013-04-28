@@ -1,8 +1,7 @@
 --API functions
 ---------------
-
 --Single nodes
--------------
+--------------
 --noncubic.register_slope(modname, subname, recipeitem, groups, images, description)
 --noncubic.register_slope_upsdown(modname, subname, recipeitem, groups, images, description)
 --noncubic.register_slope_edge(modname, subname, recipeitem, groups, images, description)
@@ -59,7 +58,7 @@ noncubic.register_slope = function(modname, subname, recipeitem, groups, images,
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:slope_' .. subname .. ' 6',
+    output = modname..':slope_' .. subname .. ' 6',
     recipe = {
       {recipeitem, "", ""},
       {recipeitem, recipeitem, ""},
@@ -67,7 +66,7 @@ noncubic.register_slope = function(modname, subname, recipeitem, groups, images,
     },
   })
   minetest.register_craft({
-    output = 'noncubic:slope_' .. subname .. ' 6',
+    output = modname..':slope_' .. subname .. ' 6',
     recipe = {
       {"", "", recipeitem},
       {"", recipeitem, recipeitem},
@@ -100,7 +99,7 @@ noncubic.register_slope_upsdown = function(modname, subname, recipeitem, groups,
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:slope_upsdown_' .. subname .. ' 6',
+    output = modname..':slope_upsdown_' .. subname .. ' 6',
     recipe = {
       {recipeitem, recipeitem, recipeitem},
       {"", recipeitem, recipeitem},  
@@ -108,7 +107,7 @@ noncubic.register_slope_upsdown = function(modname, subname, recipeitem, groups,
     },
   })
   minetest.register_craft({
-    output = 'noncubic:slope_upsdown_' .. subname .. ' 6',
+    output = modname..':slope_upsdown_' .. subname .. ' 6',
     recipe = {
       {recipeitem, recipeitem, recipeitem},
       {recipeitem, recipeitem, ""},  
@@ -141,7 +140,7 @@ noncubic.register_slope_edge = function(modname, subname, recipeitem, groups, im
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:slope_edge_' .. subname .. ' 3',
+    output = modname..':slope_edge_' .. subname .. ' 3',
     recipe = {
       {"", "", ""},
       {recipeitem, "", ""},
@@ -149,7 +148,7 @@ noncubic.register_slope_edge = function(modname, subname, recipeitem, groups, im
     },
   })
   minetest.register_craft({
-    output = 'noncubic:slope_edge_' .. subname .. ' 3',
+    output = modname..':slope_edge_' .. subname .. ' 3',
     recipe = {
       {"", "", ""},
       {"", "", recipeitem},
@@ -183,7 +182,7 @@ noncubic.register_slope_inner_edge = function(modname, subname, recipeitem, grou
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:slope_inner_edge_' .. subname .. ' 3',
+    output = modname..':slope_inner_edge_' .. subname .. ' 3',
     recipe = {
       {"", "", recipeitem},
       {recipeitem, "", ""},
@@ -191,7 +190,7 @@ noncubic.register_slope_inner_edge = function(modname, subname, recipeitem, grou
     },
   })
   minetest.register_craft({
-    output = 'noncubic:slope_inner_edge_' .. subname .. ' 3',
+    output = modname..':slope_inner_edge_' .. subname .. ' 3',
     recipe = {
       {recipeitem, "", ""},
       {"", "", recipeitem},
@@ -225,7 +224,7 @@ noncubic.register_slope_upsdown_edge = function(modname, subname, recipeitem, gr
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:slope_upsdown_edge_' .. subname .. ' 3',
+    output = modname..':slope_upsdown_edge_' .. subname .. ' 3',
     recipe = {
       {"", recipeitem, recipeitem},
       {"", "", recipeitem},
@@ -233,7 +232,7 @@ noncubic.register_slope_upsdown_edge = function(modname, subname, recipeitem, gr
     },
   })
   minetest.register_craft({
-    output = 'noncubic:slope_upsdown_edge_' .. subname .. ' 3',
+    output = modname..':slope_upsdown_edge_' .. subname .. ' 3',
     recipe = {
       {recipeitem, recipeitem, ""},
       {recipeitem, "", ""},
@@ -268,7 +267,7 @@ noncubic.register_slope_upsdown_inner_edge = function(modname, subname, recipeit
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:slope_upsdown_inner_edge_' .. subname .. ' 3',
+    output = modname..':slope_upsdown_inner_edge_' .. subname .. ' 3',
     recipe = {
       {"", recipeitem, recipeitem},
       {"", "", recipeitem},
@@ -276,7 +275,7 @@ noncubic.register_slope_upsdown_inner_edge = function(modname, subname, recipeit
     },
   })
   minetest.register_craft({
-    output = 'noncubic:slope_upsdown_inner_edge_' .. subname .. ' 3',
+    output = modname..':slope_upsdown_inner_edge_' .. subname .. ' 3',
     recipe = {
       {recipeitem, recipeitem, ""},
       {recipeitem, "", ""},
@@ -309,7 +308,7 @@ noncubic.register_pyramid = function(modname, subname, recipeitem, groups, image
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:pyramid_' .. subname .. ' 3',
+    output = modname..':pyramid_' .. subname .. ' 3',
     recipe = {
       {"", "", ""},
       {"", recipeitem, ""},
@@ -342,7 +341,7 @@ noncubic.register_spike = function(modname, subname, recipeitem, groups, images,
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:spike_' .. subname .. ' 5',
+    output = modname..':spike_' .. subname .. ' 5',
     recipe = {
       {"", recipeitem, ""},
       {recipeitem, "", recipeitem},
@@ -377,7 +376,7 @@ noncubic.register_cylinder = function(modname, subname, recipeitem, groups, imag
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:cylinder_' .. subname .. ' 6',
+    output = modname..':cylinder_' .. subname .. ' 6',
     recipe = {
       {recipeitem, recipeitem, ""},
       {recipeitem, recipeitem, ""},
@@ -385,10 +384,10 @@ noncubic.register_cylinder = function(modname, subname, recipeitem, groups, imag
     },
   })
   minetest.register_craft({
-    output = 'noncubic:cylinder_' .. subname .. ' 1',
+    output = modname..':cylinder_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", 'noncubic:cylinder_horizontal_' .. subname, ""},
+      {"", modname..':cylinder_horizontal_' .. subname, ""},
       {"", "", ""},    
     },
   })
@@ -420,7 +419,7 @@ noncubic.register_cylinder_horizontal = function(modname, subname, recipeitem, g
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:cylinder_horizontal_' .. subname .. ' 6',
+    output = modname..':cylinder_horizontal_' .. subname .. ' 6',
     recipe = {
       {"", "", ""},
       {recipeitem, recipeitem, recipeitem},
@@ -428,10 +427,10 @@ noncubic.register_cylinder_horizontal = function(modname, subname, recipeitem, g
     },
   })
   minetest.register_craft({
-    output = 'noncubic:cylinder_horizontal_' .. subname .. ' 1',
+    output = modname..':cylinder_horizontal_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", 'noncubic:cylinder_' .. subname, ""},
+      {"", modname..':cylinder_' .. subname, ""},
       {"", "", ""},    
     },
   })
@@ -463,7 +462,7 @@ noncubic.register_sphere = function(modname, subname, recipeitem, groups, images
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:cylinder_sphere_' .. subname .. ' 4',
+    output = modname..':cylinder_sphere_' .. subname .. ' 4',
     recipe = {
       {"", recipeitem, ""},
       {recipeitem, "", recipeitem},
@@ -493,7 +492,7 @@ noncubic.register_element_straight = function(modname, subname, recipeitem, grou
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:element_straight_' .. subname .. ' 12',
+    output = modname..':element_straight_' .. subname .. ' 12',
     recipe = {
       {"", recipeitem, ""},
       {"", recipeitem, ""},
@@ -527,7 +526,7 @@ noncubic.register_element_edge = function(modname, subname, recipeitem, groups, 
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:element_edge_' .. subname .. ' 10',
+    output = modname..':element_edge_' .. subname .. ' 10',
     recipe = {
       {recipeitem, recipeitem, recipeitem},
       {"", "", recipeitem},
@@ -563,7 +562,7 @@ noncubic.register_element_t = function(modname, subname, recipeitem, groups, ima
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:element_t_' .. subname .. ' 8',
+    output = modname..':element_t_' .. subname .. ' 8',
     recipe = {
       {"", "", ""},
       {recipeitem, recipeitem, recipeitem},
@@ -599,7 +598,7 @@ noncubic.register_element_cross = function(modname, subname, recipeitem, groups,
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:element_cross_' .. subname .. ' 10',
+    output = modname..':element_cross_' .. subname .. ' 10',
     recipe = {
       {"", recipeitem, ""},
       {recipeitem, recipeitem, recipeitem},
@@ -628,7 +627,7 @@ noncubic.register_element_end = function(modname, subname, recipeitem, groups, i
     groups = groups,
   })
   minetest.register_craft({
-    output = 'noncubic:element_end_' .. subname .. ' 8',
+    output = modname..':element_end_' .. subname .. ' 8',
     recipe = {
       {"", "", ""},
       {"", recipeitem, ""},
@@ -659,11 +658,11 @@ noncubic.register_element_straight_double = function(modname, subname, recipeite
     groups = groups3,
   })
   minetest.register_craft({
-    output = 'noncubic:element_straight_double_' .. subname .. ' 1',
+    output = modname..':element_straight_double_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", 'noncubic:element_straight_' .. recipeitem3, ""},
-      {"", 'noncubic:element_straight_' .. recipeitem3, ""},    
+      {"", modname..':element_straight_' .. recipeitem3, ""},
+      {"", modname..':element_straight_' .. recipeitem3, ""},    
     },
   })
 
@@ -695,11 +694,11 @@ noncubic.register_element_edge_double = function (modname, subname, recipeitem3,
     groups = groups3,
   })
   minetest.register_craft({
-    output = 'noncubic:element_edge_double_' .. subname .. ' 1',
+    output = modname..':element_edge_double_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", 'noncubic:element_edge_' .. recipeitem3, ""},
-      {"", 'noncubic:element_edge_' .. recipeitem3, ""},    
+      {"", modname..':element_edge_' .. recipeitem3, ""},
+      {"", modname..':element_edge_' .. recipeitem3, ""},    
     },
   })
 
@@ -733,11 +732,11 @@ noncubic.register_element_t_double = function (modname, subname, recipeitem3, gr
     groups = groups3,
   })
   minetest.register_craft({
-    output = 'noncubic:element_element_t_double_' .. subname .. ' 1',
+    output = modname..':element_element_t_double_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", 'noncubic:element_t_' .. recipeitem3, ""},
-      {"", 'noncubic:element_t_' .. recipeitem3, ""},    
+      {"", modname..':element_t_' .. recipeitem3, ""},
+      {"", modname..':element_t_' .. recipeitem3, ""},    
     },
   })
 
@@ -770,11 +769,11 @@ noncubic.register_element_cross_double = function (modname, subname, recipeitem3
     groups = groups3,
   })
   minetest.register_craft({
-    output = 'noncubic:element_cross_double_' .. subname .. ' 1',
+    output = modname..':element_cross_double_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", 'noncubic:element_cross_' .. recipeitem3, ""},
-      {"", 'noncubic:element_cross_' .. recipeitem3, ""},    
+      {"", modname..':element_cross_' .. recipeitem3, ""},
+      {"", modname..':element_cross_' .. recipeitem3, ""},    
       },
   })
 
@@ -799,11 +798,11 @@ noncubic.register_element_end_double = function (modname, subname, recipeitem3, 
     groups = groups3,
   })
   minetest.register_craft({
-    output = 'noncubic:element_end_double_' .. subname .. ' 1',
+    output = modname..':element_end_double_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", 'noncubic:element_end_' .. recipeitem3, ""},
-      {"", 'noncubic:element_end_' .. recipeitem3, ""},
+      {"", modname..':element_end_' .. recipeitem3, ""},
+      {"", modname..':element_end_' .. recipeitem3, ""},
       },
   })
 end
@@ -827,7 +826,7 @@ noncubic.register_stick = function (modname, subname, recipeitem2, groups2, imag
     groups = groups2,
   })
   minetest.register_craft({
-    output = 'noncubic:stick_' .. subname .. ' 8',
+    output = modname..':stick_' .. subname .. ' 8',
     recipe = {
       {'default:stick', "", ""},
       {"", "", ""},
@@ -836,7 +835,7 @@ noncubic.register_stick = function (modname, subname, recipeitem2, groups2, imag
   })
 end
 
-noncubic.register_stairs = function(modname, item, groups, images, description)
+noncubic.register_stairs = function(modname, item, recipeitem, groups, images, description)
   local recipeitem = modname..":"..item
   local itemname = modname..":stair_"..item
 	minetest.register_node(itemname, {
