@@ -17,11 +17,11 @@
 --noncubic.register_element_t = function(modname, subname, recipeitem, groups, images, description)
 --noncubic.register_element_cross(modname, subname, recipeitem, groups, images, description)
 --noncubic.register_element_end(modname, subname, recipeitem, groups, images, description)
---noncubic.register_element_straight_double(subname, recipeitem3, groups3, images3,
---noncubic.register_element_edge_double(subname, recipeitem3, groups3, images3, description3)
---noncubic.register_element_t_double(subname, recipeitem3, groups3, images3, description3)
---noncubic.register_element_cross_double(subname, recipeitem3, groups3, images3, description3)
---noncubic.register_element_end_double(subname, recipeitem3, groups3, images3, description3)
+--noncubic.register_element_straight_double(subname, recipeitem, groups3, images3,
+--noncubic.register_element_edge_double(subname, recipeitem, groups3, images3, description3)
+--noncubic.register_element_t_double(subname, recipeitem, groups3, images3, description3)
+--noncubic.register_element_cross_double(subname, recipeitem, groups3, images3, description3)
+--noncubic.register_element_end_double(subname, recipeitem, groups3, images3, description3)
 --noncubic.register_stick(subname, recipeitem2, groups2, images2, description2)
 
 --Group nodes
@@ -638,7 +638,7 @@ noncubic.register_element_end = function(modname, subname, recipeitem, groups, i
 
 end
 
-noncubic.register_element_straight_double = function(modname, subname, recipeitem3, groups3, images3, description3)
+noncubic.register_element_straight_double = function(modname, subname, recipeitem, groups3, images3, description3)
   minetest.register_node(modname..":element_straight_double_" .. subname, {
     description = description3.. " Straight Double",
     drawtype = "nodebox",
@@ -662,14 +662,14 @@ noncubic.register_element_straight_double = function(modname, subname, recipeite
     output = modname..':element_straight_double_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", modname..':element_straight_' .. recipeitem3, ""},
-      {"", modname..':element_straight_' .. recipeitem3, ""},    
+      {"", modname..':element_straight_' .. subname, ""},
+      {"", modname..':element_straight_' .. subname, ""},    
     },
   })
 
 end
 
-noncubic.register_element_edge_double = function (modname, subname, recipeitem3, groups3, images3, description3)
+noncubic.register_element_edge_double = function (modname, subname, recipeitem, groups3, images3, description3)
 
   minetest.register_node(modname..":element_edge_double_" .. subname, {
     description = description3.. " Edge Double",
@@ -698,14 +698,14 @@ noncubic.register_element_edge_double = function (modname, subname, recipeitem3,
     output = modname..':element_edge_double_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", modname..':element_edge_' .. recipeitem3, ""},
-      {"", modname..':element_edge_' .. recipeitem3, ""},    
+      {"", modname..':element_edge_' .. subname, ""},
+      {"", modname..':element_edge_' .. subname, ""},    
     },
   })
 
 end
 
-noncubic.register_element_t_double = function (modname, subname, recipeitem3, groups3, images3, description3)
+noncubic.register_element_t_double = function (modname, subname, recipeitem, groups3, images3, description3)
 
   minetest.register_node(modname..":element_element_t_double_" .. subname, {
     description = description3.. " T Double",
@@ -736,18 +736,18 @@ noncubic.register_element_t_double = function (modname, subname, recipeitem3, gr
     output = modname..':element_element_t_double_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", modname..':element_t_' .. recipeitem3, ""},
-      {"", modname..':element_t_' .. recipeitem3, ""},    
+      {"", modname..':element_t_' .. subname, ""},
+      {"", modname..':element_t_' .. subname, ""},
     },
   })
 
 end
 
-noncubic.register_element_cross_double = function (modname, subname, recipeitem3, groups3, images3, description3)
+noncubic.register_element_cross_double = function (modname, subname, recipeitem, groups3, images, description3)
   minetest.register_node(modname..":element_cross_double_" .. subname, {
     description = description3.. " Cross Double",
     drawtype = "nodebox",
-    tiles = images3,
+    tiles = images,
     paramtype = "light",
     paramtype2 = "facedir",
     walkable = true,
@@ -773,14 +773,13 @@ noncubic.register_element_cross_double = function (modname, subname, recipeitem3
     output = modname..':element_cross_double_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", modname..':element_cross_' .. recipeitem3, ""},
-      {"", modname..':element_cross_' .. recipeitem3, ""},    
+      {"", modname .. ':element_cross_'..subname, ""},
+      {"", modname .. ':element_cross_'..subname, ""},
       },
   })
-
 end
 
-noncubic.register_element_end_double = function (modname, subname, recipeitem3, groups3, images3, description3)
+noncubic.register_element_end_double = function (modname, subname, recipeitem, groups3, images3, description3)
   minetest.register_node(modname..":element_end_double_" .. subname, {
     description = description3.. " End Double",
     drawtype = "nodebox",
@@ -802,8 +801,8 @@ noncubic.register_element_end_double = function (modname, subname, recipeitem3, 
     output = modname..':element_end_double_' .. subname .. ' 1',
     recipe = {
       {"", "", ""},
-      {"", modname..':element_end_' .. recipeitem3, ""},
-      {"", modname..':element_end_' .. recipeitem3, ""},
+      {"", modname..':element_end_' .. subname, ""},
+      {"", modname..':element_end_' .. subname, ""},
       },
   })
 end
@@ -968,12 +967,16 @@ noncubic.register_spherical = function(modname, subname, recipeitem, groups, ima
   noncubic.register_sphere(modname, subname, recipeitem, groups, images, description)
 end
 
-noncubic.register_elements = function(modname, subname, recipeitem3, groups3, images3, description)
-  noncubic.register_element_straight_double(modname, subname, recipeitem3, groups3, images3, description)
-  noncubic.register_element_edge_double(modname, subname, recipeitem3, groups3, images3, description)
-  noncubic.register_element_t_double(modname, subname, recipeitem3, groups3, images3, description)
-  noncubic.register_element_cross_double(modname, subname, recipeitem3, groups3, images3, description)
-  noncubic.register_element_end_double(modname, subname, recipeitem3, groups3, images3, description)
+noncubic.register_elements = function(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_cross(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_t(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_edge(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_straight(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_straight_double(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_edge_double(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_t_double(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_cross_double(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_element_end_double(modname, subname, recipeitem, groups, images, description)
 end
 
 noncubic.register_all = function(modname, subname, recipeitem, groups, images, description)
