@@ -1,4 +1,0 @@
-noncubic
-========
-
-noncubic mod redone
