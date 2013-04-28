@@ -38,11 +38,6 @@ noncubic.register_elements("wood","wood",
 {"default_wood.png"},
 "Wooden")
 
-noncubic.register_elements("tree","tree",
-{tree=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
-{"default_tree_top.png", "default_tree_top.png", "default_tree.png"},
-"Wooden")
-
 noncubic.register_elements("stone","stone",
 {cracky=3},
 {"default_stone.png"},
@@ -126,3 +121,8 @@ noncubic.register_all("steel","default:steelblock",
 {cracky=1,level=2},
 {"default_steel_block.png"},
 "Steel")
+
+noncubic.register_all("tree","default:tree",
+{tree=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
+{"default_tree_top.png", "default_tree_top.png", "default_tree.png"},
+"Tree")
