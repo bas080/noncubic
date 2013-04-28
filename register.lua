@@ -76,10 +76,10 @@ noncubic.register_all("wood","stairs:stair_wood",
 {"default_wood.png"},
 "Wooden")
 
-noncubic.register_all("wood","stairs:stair_junglewood",
+noncubic.register_all("junglewood","stairs:stair_junglewood",
 {snappy=2,choppy=2,oddly_breakable_by_hand=2},
 {"default_junglewood.png"},
-"Wooden")
+"Jungle Wooden")
 
 noncubic.register_all("stone","stairs:stair_stone",
 {cracky=3},
