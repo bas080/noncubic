@@ -7,6 +7,6 @@ dofile(minetest.get_modpath("noncubic").."/mill.lua")
 dofile(minetest.get_modpath("noncubic").."/api.lua")
 dofile(minetest.get_modpath("noncubic").."/register.lua")
 
-
+--for testing
 dofile(minetest.get_modpath("noncubic").."/bas080.lua")
 

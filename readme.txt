@@ -1,27 +1,18 @@
 [MOD] NonCubicBlocks 1.1 - for Minetest v0.4 or later
 --------------------------------------by yves_de_beck
 
-
-
-Install:
---------
-Simply copy the complete "noncubic" folder in the ..minetest-0.4.4-win32/mods/minetest/ directory.
-
-
-
 Dependence:
 -----------
 Default Stairs MOD (inkluding Minetest v0.4 or higher)
 
-
-
 For Slower PC's:
 ----------------
 You can change in the init.lua the 'detail_level = 20' lower (or higher for faster PC's)
-
 Example: 'detail_level = 16' works very well for older PC's and looks good. =D
 
-
+API:
+----
+See api.lua for more documentation
 
 Recipes:
 --------

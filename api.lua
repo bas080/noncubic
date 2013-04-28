@@ -1,6 +1,7 @@
 --API functions
 ---------------
---Single node
+
+--Single nodes
 -------------
 --noncubic.register_slope(subname, recipeitem, groups, images, description)
 --noncubic.register_slope_upsdown(subname, recipeitem, groups, images, description)
@@ -26,9 +27,12 @@
 
 --Group nodes
 -------------
---noncubic.register_all(subname, recipeitem, groups, images, desc_slope, desc_slope_upsdown, desc_slope_edge, desc_slope_inner_edge, desc_slope_upsdwn_edge, desc_slope_upsdwn_inner_edge, desc_pyramid, desc_spike, desc_cylinder, desc_cylinder_horizontal, desc_sphere, desc_element_straight, desc_element_edge, desc_element_t, desc_element_cross, desc_element_end)
+--noncubic.register_all(subname, recipeitem, groups, images, description)
 --noncubic.register_roof(subname, recipeitem, groups, images , description)
+--noncubic.register_elements(subname, recipeitem, groups, images , description)
 
+--Single
+--------
 noncubic.register_slope = function(subname, recipeitem, groups, images, description)
   local slopebox = {}
   local detail = detail_level
@@ -566,7 +570,6 @@ noncubic.register_element_t = function(subname, recipeitem, groups, images, desc
   })
 end
 
-
 noncubic.register_element_cross = function(subname, recipeitem, groups, images, description)
   minetest.register_node("noncubic:element_cross_" .. subname, {
     description = description.. " Cross Junction",
@@ -605,22 +608,22 @@ end
 
 noncubic.register_element_end = function(subname, recipeitem, groups, images, description)
 
-minetest.register_node("noncubic:element_end_" .. subname, {
-  description = description.. " End",
-  drawtype = "nodebox",
-  tiles = images,
-  paramtype = "light",
-  paramtype2 = "facedir",
-  walkable = true,
-  selection_box = {
-    type = "fixed",
-    fixed = {-0.3, -0.5, -0.3, 0.3, 0, 0.5},
-  },
-  node_box = {
-    type = "fixed",
-    fixed = {-0.3, -0.5, -0.3, 0.3, 0, 0.5},
-  },
-  groups = groups,
+  minetest.register_node("noncubic:element_end_" .. subname, {
+    description = description.. " End",
+    drawtype = "nodebox",
+    tiles = images,
+    paramtype = "light",
+    paramtype2 = "facedir",
+    walkable = true,
+    selection_box = {
+      type = "fixed",
+      fixed = {-0.3, -0.5, -0.3, 0.3, 0, 0.5},
+    },
+    node_box = {
+      type = "fixed",
+      fixed = {-0.3, -0.5, -0.3, 0.3, 0, 0.5},
+    },
+    groups = groups,
   })
   minetest.register_craft({
     output = 'noncubic:element_end_' .. subname .. ' 8',
@@ -799,7 +802,7 @@ noncubic.register_element_end_double = function(subname3, recipeitem3, groups3, 
     recipe = {
       {"", "", ""},
       {"", 'noncubic:element_end_' .. recipeitem3, ""},
-      {"", 'noncubic:element_end_' .. recipeitem3, ""},    
+      {"", 'noncubic:element_end_' .. recipeitem3, ""},
       },
   })
 end
