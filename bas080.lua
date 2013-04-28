@@ -13,4 +13,5 @@ minetest.register_node("noncubic:roof_tar", {
 	groups = {choppy=2,oddly_breakable_by_hand=2,flammable=2},
 })
 
-noncubic.register_roof("tar", "noncubic:roof_tar", {choppy=2,oddly_breakable_by_hand=2,flammable=2}, {"roof_shingles.png"}, "Tar Roof")
+
+noncubic.register_roof("noncubic", "tar", "noncubic:roof_tar", {choppy=2,oddly_breakable_by_hand=2,flammable=2}, {"roof_shingles.png"}, "Tar Roof")
