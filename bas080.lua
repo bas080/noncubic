@@ -1,11 +1,5 @@
 --Register Roof by Bas080
 -------------------------
-function noncubic.register_roof(subname, recipeitem, groups, images , description)
-  noncubic.register_slope_edge(subname, recipeitem, groups, images, description)
-  noncubic.register_slope_inner_edge(subname, recipeitem, groups, images, description)
-  noncubic.register_slope(subname, recipeitem, groups, images, description)
-end
-
 minetest.register_craft({
 	type = "shapeless",
 	output = "noncubic:roof_tar",
