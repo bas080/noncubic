@@ -31,6 +31,7 @@
 --noncubic.register_slopes(modname, subname, recipeitem, groups, images , description)
 --noncubic.register_roof(modname, subname, recipeitem, groups, images , description)
 --noncubic.register_elements(modname, subname, recipeitem, groups, images , description)
+--noncubic.register_stairs(modname, item, recipeitem, groups, images, description)
 
 --Single
 --------
