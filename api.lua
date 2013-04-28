@@ -28,6 +28,8 @@
 --Group nodes
 -------------
 --noncubic.register_all(subname, recipeitem, groups, images, description)
+--noncubic.register_spherical(subname, recipeitem, groups, images , description)
+--noncubic.register_slopes(subname, recipeitem, groups, images , description)
 --noncubic.register_roof(subname, recipeitem, groups, images , description)
 --noncubic.register_elements(subname, recipeitem, groups, images , description)
 
@@ -842,6 +844,23 @@ noncubic.register_roof = function(subname, recipeitem, groups, images , descript
   noncubic.register_slope_edge(subname, recipeitem, groups, images, description)
   noncubic.register_slope_inner_edge(subname, recipeitem, groups, images, description)
   noncubic.register_slope(subname, recipeitem, groups, images, description)
+end
+
+noncubic.register_slopes = function(subname, recipeitem, groups, images , description)
+  noncubic.register_slope(subname, recipeitem, groups, images, description)
+  noncubic.register_slope_upsdown(subname, recipeitem, groups, images, description)
+  noncubic.register_slope_edge(subname, recipeitem, groups, images, description)
+  noncubic.register_slope_inner_edge(subname, recipeitem, groups, images, description)
+  noncubic.register_slope_upsdown_edge(subname, recipeitem, groups, images, description)
+  noncubic.register_slope_upsdown_inner_edge(subname, recipeitem, groups, images, description)
+  noncubic.register_pyramid(subname, recipeitem, groups, images, description)
+  noncubic.register_spike(subname, recipeitem, groups, images, description)
+end
+
+noncubic.register_spherical = function(subname, recipeitem, groups, images , description)
+  noncubic.register_cylinder(subname, recipeitem, groups, images, description)
+  noncubic.register_cylinder_horizontal(subname, recipeitem, groups, images, description)
+  noncubic.register_sphere(subname, recipeitem, groups, images, description)
 end
 
 noncubic.register_all = function(subname, recipeitem, groups, images, description)
