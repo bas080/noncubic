@@ -38,6 +38,11 @@ noncubic.register_elements("wood","wood",
 {"default_wood.png"},
 "Wooden")
 
+noncubic.register_elements("tree","tree",
+{tree=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
+{"default_tree_top.png", "default_tree_top.png", "default_tree.png"},
+"Wooden")
+
 noncubic.register_elements("stone","stone",
 {cracky=3},
 {"default_stone.png"},
@@ -76,6 +81,11 @@ noncubic.register_all("wood","stairs:stair_wood",
 {"default_wood.png"},
 "Wooden")
 
+noncubic.register_all("wood","stairs:stair_junglewood",
+{snappy=2,choppy=2,oddly_breakable_by_hand=2},
+{"default_wood.png"},
+"Wooden")
+
 noncubic.register_all("stone","stairs:stair_stone",
 {cracky=3},
 {"default_stone.png"},
@@ -99,7 +109,7 @@ noncubic.register_all("sandstone","stairs:stair_sandstone",
 
 noncubic.register_all("leaves","default:leaves",
 {snappy=2,choppy=2,oddly_breakable_by_hand=3},
-{"bucharest_tree.png"},
+{"default_leaves.png"},
 "Leaves")
 
 noncubic.register_all("dirt","default:dirt",
@@ -111,3 +121,8 @@ noncubic.register_all("glass","default:glass",
 {snappy=2,choppy=2,oddly_breakable_by_hand=2},
 {"default_glass.png"},
 "Glass")
+
+noncubic.register_all("steel","default:steelblock",
+{cracky=1,level=2},
+{"default_steel_block.png"},
+"Steel")
