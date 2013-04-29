@@ -23,11 +23,6 @@ noncubic.register_stick("noncubic", "sandstone","default:sandstone",
 {"default_sandstone.png"},
 "Sandstone")
 
-noncubic.register_stick("noncubic", "glass","default:glass",
-{snappy=2,choppy=2,oddly_breakable_by_hand=2},
-{"default_glass.png"},
-"Glass")
-
 noncubic.register_elements("noncubic", "leaves","default:leaves",
 {snappy=2,choppy=2,oddly_breakable_by_hand=3},
 {"default_leaves.png"},
@@ -63,16 +58,6 @@ noncubic.register_all("noncubic", "sandstone","stairs:stair_sandstone",
 {crumbly=2,cracky=2},
 {"default_sandstone.png"},
 "Sandstone")
-
-noncubic.register_all("noncubic", "dirt","default:dirt",
-{snappy=2,choppy=2,oddly_breakable_by_hand=3},
-{"default_dirt.png"},
-"Dirt")
-
-noncubic.register_all("noncubic", "glass","default:glass",
-{snappy=2,choppy=2,oddly_breakable_by_hand=2},
-{"default_glass.png"},
-"Glass")
 
 noncubic.register_all("noncubic", "steel","default:steelblock",
 {cracky=1,level=2},
