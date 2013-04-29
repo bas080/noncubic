@@ -62,7 +62,7 @@ noncubic.register_slope = function(modname, subname, recipeitem, groups, images,
     output = modname..':slope_' .. subname .. ' 6',
     recipe = {
       {recipeitem, "", ""},
-      {recipeitem, recipeitem, ""},
+      {recipeitem, "default:stick", ""},
       {recipeitem, recipeitem, recipeitem},    
     },
   })
@@ -70,7 +70,7 @@ noncubic.register_slope = function(modname, subname, recipeitem, groups, images,
     output = modname..':slope_' .. subname .. ' 6',
     recipe = {
       {"", "", recipeitem},
-      {"", recipeitem, recipeitem},
+      {"", "default:stick", recipeitem},
       {recipeitem, recipeitem, recipeitem},    
     },
   })
@@ -977,11 +977,14 @@ end
 
 --groups
 --------
+
 noncubic.register_roof = function(modname, subname, recipeitem, groups, images , description)
   noncubic.register_slope_edge(modname, subname, recipeitem, groups, images, description)
   noncubic.register_slope_inner_edge(modname, subname, recipeitem, groups, images, description)
   noncubic.register_slope(modname, subname, recipeitem, groups, images, description)
   noncubic.register_pyramid(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_slope_upsdown_edge(modname, subname, recipeitem, groups, images, description)
+  noncubic.register_slope_upsdown_inner_edge(modname, subname, recipeitem, groups, images, description)
 end
 
 noncubic.register_slopes = function(modname, subname, recipeitem, groups, images , description)

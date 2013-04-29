@@ -28,33 +28,33 @@ noncubic.register_elements("noncubic", "leaves","default:leaves",
 {"default_leaves.png"},
 "Leaves")
 
-noncubic.register_all("noncubic", "wood","stairs:stair_wood",
+noncubic.register_all("noncubic", "wood","default:wood",
 {snappy=2,choppy=2,oddly_breakable_by_hand=2},
 {"default_wood.png"},
 "Wooden")
 
-noncubic.register_all("noncubic", "junglewood","stairs:stair_junglewood",
+noncubic.register_all("noncubic", "junglewood","default:junglewood",
 {snappy=2,choppy=2,oddly_breakable_by_hand=2},
 {"default_junglewood.png"},
 "Jungle Wooden")
 
-noncubic.register_all("noncubic", "stone","stairs:stair_stone",
+noncubic.register_all("noncubic", "stone","default:stone",
 {cracky=3},
 {"default_stone.png"},
 "StoneSlope",
 "Stone")
 
-noncubic.register_all("noncubic", "cobble","stairs:stair_cobble",
+noncubic.register_all("noncubic", "cobble","default:cobble",
 {cracky=3},
 {"default_cobble.png"},
 "Cobble")
 
-noncubic.register_all("noncubic", "brick","stairs:stair_brick",
+noncubic.register_all("noncubic", "brick","default:brick",
 {cracky=3},
 {"default_brick.png"},
 "Brick")
 
-noncubic.register_all("noncubic", "sandstone","stairs:stair_sandstone",
+noncubic.register_all("noncubic", "sandstone","default:sandstone",
 {crumbly=2,cracky=2},
 {"default_sandstone.png"},
 "Sandstone")
