@@ -1,3 +1,15 @@
+--Stairs
+noncubic.register_stair_and_slab_and_panel_and_micro("noncubic", "grass", "default:dirt",
+{crumbly=3},
+{"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+"Grass Stairs",
+"Grass Slab",
+"Grass Panel",
+"Grass Microblock",
+"grass")
+
+--Noncubic
+
 noncubic.register_stick("noncubic", "wood","default:wood",
 {snappy=2,choppy=2,oddly_breakable_by_hand=2},
 {"default_wood.png"},

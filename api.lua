@@ -23,7 +23,8 @@
 --noncubic.register_element_cross_double(subname, recipeitem, groups3, images3, description3)
 --noncubic.register_element_end_double(subname, recipeitem, groups3, images3, description3)
 --noncubic.register_stick(subname, recipeitem2, groups2, images2, description2)
-
+--Stair
+--noncubic.register_stair(modname, subname, recipeitem, groups, images, description, drop)
 --Group nodes
 -------------
 --noncubic.register_all(modname, subname, recipeitem, groups, images, description)
