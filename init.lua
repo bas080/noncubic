@@ -9,5 +9,5 @@ dofile(minetest.get_modpath("noncubic").."/stairsplus.lua")
 dofile(minetest.get_modpath("noncubic").."/register.lua")
 
 --for testing
-dofile(minetest.get_modpath("noncubic").."/demo.lua")
+--dofile(minetest.get_modpath("noncubic").."/demo.lua")
 
